@@ -1,14 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>DYNAMIC HTML STRING</title>
-</head>
-<body>
-<script type="text/javascript">
-    let mystring = "<p>Hello!</p> <strong>My friend</strong>";
-    document.write(mystring);
-</script>
-</body>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>DYNAMIC HTML STRING</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function getFullYear() {
+				var year = new Date().getFullYear();
+				return year;
+			}
+			var mystring = `<p>Hello! <strong>My friend</strong>, we are in the year ${getFullYear()} </p>`;
+			var i = document.createElement("span");
+			document.body.appendChild(i);
+			document.write(mystring);
+
+			// var addedString = document.createElement("span");
+			// addedString.innerHTML = ", we are in the year ";
+			// document.body.appendChild(addedString);
+			// var today = new Date();
+			// var year = today.getFullYear();
+			// var addedDate = document.createElement("span");
+			// addedDate.innerHTML = year;
+			// document.body.appendChild(addedDate);
+		</script>
+	</body>
 </html>
